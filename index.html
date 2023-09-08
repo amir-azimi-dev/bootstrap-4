@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" x-data="darkTheme" :class="{dark: darkMode}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Leaflets (map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <title>bootstrap-4</title>
+</head>
+
+<body class="body--dark">
+
+    <!-- theme switch start -->
+    <div class="d-flex align-items-center justify-content-end p-3 dark-text-light">
+        <i class="lh-0 bi bi-brightness-high-fill fs-3 me-2"></i>
+        <div class="form-check form-switch">
+            <input class="theme-switch form-check-input" type="checkbox" id="flexSwitchCheckChecked" x-model="darkMode"
+                @click="console.log(darkMode)">
+        </div>
+        <i class="lh-0 bi bi-moon-stars-fill fs-5 ms-2"></i>
+    </div>
+    <!-- theme switch end -->
+
+    <main class="main dark-text-light">
+        <div class="container">
+            <div class="row text-center text-gray dark-text-light">
+                <h2 class="title fs-3 fw-bold mb-2 mb-md-0"><span class="text-primary">لورم ایپسوم</span> <span
+                        id="typewriter"></span>
+                </h2>
+                <p class="mb-0">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                </p>
+            </div>
+
+            <div class="row my-5" x-data="countdown">
+                <div class="countdowns-container col-12 d-flex justify-content-center text-center">
+                    <div class="countdown border border-white rounded-3 p-4">
+                        <h4 class="my-1 fw-bold" x-text="days"></h4>
+                        <p class="my-1">روز</p>
+                    </div>
+                    <div class="countdown border border-white rounded-3 p-4">
+                        <h4 class="my-1 fw-bold" x-text="hours"></h4>
+                        <p class="my-1">ساعت</p>
+                    </div>
+                    <div class="countdown border border-white rounded-3 p-4">
+                        <h4 class="my-1 fw-bold" x-text="minutes"></h4>
+                        <p class="my-1">دقیقه</p>
+                    </div>
+                    <div class="countdown border border-white rounded-3 p-4">
+                        <h4 class="my-1 fw-bold" x-text="seconds"></h4>
+                        <p class="my-1">ثانیه</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-4">
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                    </p>
+                </div>
+                <div class="col-12 mx-auto">
+                    <form action="#">
+                        <div class="subscription__input input-group mx-auto px-3">
+                            <input type="text" class="form-control">
+                            <button type="submit" class="btn btn-primary">عضویت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-12 d-flex justify-content-center gap-2">
+                    <a class="icon-container text-light border rounded-circle" href="#"><i
+                            class="lh-0 fs-5 bi bi-twitter"></i></a>
+                    <a class="icon-container text-light border rounded-circle" href="#"><i
+                            class="lh-0 fs-5 bi bi-facebook"></i></a>
+                    <a class="icon-container text-light border rounded-circle" href="#"><i
+                            class="lh-0 fs-5 bi bi-instagram"></i></a>
+                    <a class="icon-container text-light border rounded-circle" href="#"><i
+                            class="lh-0 fs-5 bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-us row pb-5">
+                <div class="section-header col-12 mb-4">
+                    <h4 class="text-gray dark-text-light text-center">ارتباط با ما</h4>
+                    <div class="section-header__shape mx-auto"></div>
+                </div>
+
+                <div class="contact-us__item col-lg-5 mx-auto mb-3">
+                    <div class="card card-glass">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-container bg-glass text-light border rounded-circle flex-shrink-0">
+                                    <i class="lh-0 fs-5 bi bi-geo-alt"></i>
+                                </div>
+                                <div class="py-2">
+                                    <h5 class="fw-bold my-0">آدرس:</h5>
+                                    <p class="my-0">
+                                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-container bg-glass text-light border rounded-circle flex-shrink-0">
+                                    <i class="lh-0 fs-5 bi bi-envelope"></i>
+                                </div>
+                                <div class="py-2">
+                                    <h5 class="fw-bold my-0">ایمیل:</h5>
+                                    <p class="my-0">example@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-container bg-glass text-light border rounded-circle flex-shrink-0">
+                                    <i class="lh-0 fs-5 bi bi-telephone"></i>
+                                </div>
+                                <div class="py-2">
+                                    <h5 class="fw-bold my-0">شماره تماس:</h5>
+                                    <p class="my-0 ltr">0910 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="map-container mt-4">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us__item col-lg-7">
+                    <div class="card card-glass">
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="name">نام:</label>
+                                        <input type="text" name="" id="name" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="email">ایمیل:</label>
+                                        <input type="email" name="" id="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label class="form-label" for="subject">موضوع:</label>
+                                        <input type="text" name="" id="subject" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <label class="form-label" for="messsage">متن پیام:</label>
+                                        <textarea name="" rows="4" id="messsage" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary" type="submit">ارسال پیام</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- typewriter js -->
+    <script src="assets/js/typeWriter.min.js"></script>
+
+    <!-- leaflet (map) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
