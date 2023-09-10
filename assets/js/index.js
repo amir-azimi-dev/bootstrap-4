@@ -28,9 +28,9 @@ document.addEventListener("alpine:init", () => {
         },
 
         init() {
-            let endDate = new Date(2023, 8, 10);
+            let endDate = new Date(2024, 12, 10);
             let remindTime = endDate.getTime() - (new Date()).getTime();
-            this.setCountdown(remindTime);
+            remindTime > 0 && this.setCountdown(remindTime);
 
             let countDownInterval = setInterval(() => {
                 remindTime = endDate.getTime() - (new Date()).getTime();
